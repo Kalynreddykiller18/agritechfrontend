@@ -1,0 +1,133 @@
+/* Navigation.css */
+
+/* Base Styles for Navbar */
+nav {
+  text-align: left;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 2fr;
+  align-items: center;
+  background-color: #a2bedf;
+  position: relative; /* Necessary for positioning the menu button */
+  padding: 10px 0;
+  z-index: 5;
+}
+
+nav h2 {
+  padding-left: 10%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+}
+
+nav li a:hover {
+  border-bottom: 1px solid black;
+  padding-bottom: 3px;
+}
+
+nav img {
+  width: 20px;
+}
+
+/* Responsive Menu Button */
+.menu-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #a2bedf;
+  color: black;
+  font-size: 1.5rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+.menu-button.open {
+  background-color: #ff5c5c;
+  color: white;
+}
+
+nav ul .cartlink {
+  position: relative;
+}
+
+nav ul .cartcount {
+  position: absolute;
+  bottom: 2px;
+  right: -5px;
+  color: red;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 12px;
+  text-align: center;
+  height: 12px;
+}
+
+/* Menu for Mobile */
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #a2bedf;
+    transform: translateX(100%); /* Initially off-screen */
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+  }
+
+  .mobcart li {
+    text-align: right;
+    margin-left: 60%;
+  }
+}
+
+.nav-links.open {
+  transform: translateX(0); /* Slide in when open */
+}
+
+.nav-links li {
+  margin: 15px 0;
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  nav ul {
+    position: static;
+    transform: none;
+    flex-direction: row;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .mobcart {
+    display: none;
+  }
+}

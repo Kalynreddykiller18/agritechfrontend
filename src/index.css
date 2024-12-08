@@ -1,0 +1,22 @@
+:root {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Disable the spinner arrows for type="number" inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
+  appearance: textfield; /* Standard */
+}
+
+a {
+  /* text-decoration: none; */
+  color: black;
+}

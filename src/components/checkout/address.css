@@ -1,0 +1,39 @@
+.adress-item {
+  display: flex;
+}
+
+.adresslist ul {
+  padding: 0;
+  list-style: none;
+}
+
+.adresslist li,
+.checkoutaddress {
+  width: 80%;
+  background-color: rgba(186, 186, 184, 0.168);
+  margin: 10px 0;
+  padding: 20px;
+  margin-left: 5px 20px;
+  position: relative;
+}
+
+.adresslist p,
+.checkoutaddress p {
+  margin: 0;
+}
+
+.adresslist h3,
+.checkoutaddress h3 {
+  margin: 2px 0;
+}
+
+.adresslist img {
+  width: 20px;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+}
+
+.checkoutaddress {
+  background-color: rgba(143, 141, 141, 0.16);
+}

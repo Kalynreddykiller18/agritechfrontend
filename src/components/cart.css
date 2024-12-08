@@ -1,0 +1,66 @@
+.emptytext {
+  text-align: center;
+  width: 100%;
+}
+
+.cartcard {
+  max-width: 300px;
+  width: 300px;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cartcard .card-img {
+  height: 150px;
+}
+
+.cartcardcontrol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+.cartfooter {
+  display: grid;
+  max-width: 400px;
+  grid-template-columns: 3fr 2fr 2fr;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+  gap: 10px;
+  font-weight: 900;
+}
+
+.cartfooter button {
+  border: 0;
+  padding: 10px 5px;
+}
+
+.empty {
+  background-color: rgba(219, 8, 8, 0.977);
+  color: #ddd;
+}
+
+.checkout {
+  background-color: #007bff;
+  color: #ddd;
+}
+
+@media (max-width: 450px) {
+  .cartcard {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    margin: 10px auto;
+  }
+
+  .cartfooter {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

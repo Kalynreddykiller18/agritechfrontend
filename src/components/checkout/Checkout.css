@@ -1,0 +1,78 @@
+.checkout-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.step-status-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 2px solid lightgray;
+  position: relative;
+}
+
+.step.active {
+  font-weight: bold;
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.step.completed {
+  color: green;
+}
+
+.step.completed::before {
+  content: url("/frontend/public/Cart.svg");
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: green;
+}
+
+.step-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.cartsummary {
+  padding-left: 20px;
+}
+
+.cartsummary div {
+  display: grid;
+  max-width: 500px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.totalsummary {
+  padding-top: 20px;
+}
+
+.payment button {
+  margin-top: 20px;
+}
