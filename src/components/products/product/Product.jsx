@@ -42,7 +42,7 @@ const Product = ({ item }) => {
         <div className="card-footer">
           <h4 className="card-price">${item.price}</h4>
           <button disabled={alert1} className="card-button" onClick={addToCart}>
-            <img className="button-icon" src="Cart.svg" alt="Cart" />
+            <img className="button-icon" src="/Cart.svg" alt="Cart" />
             {alert1 ? "Added..." : "Add to Cart"}
           </button>
         </div>
