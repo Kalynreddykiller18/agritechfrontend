@@ -15,7 +15,6 @@ export const AgriContextProvider = ({ children }) => {
 
   const fetchProducts = async () => {
     try {
-      console.log("Backend API: ", apiUrl);
       const data = await axios.get(`${apiUrl}product/`);
       setProducts(data.data);
     } catch (err) {

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "./product.css";
 import axios from "axios";
 import { AgriContext } from "../../../context/AgriContext";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const Product = ({ item }) => {
   const { logged, cart, user, fetchCart } = useContext(AgriContext);
@@ -11,7 +12,7 @@ const Product = ({ item }) => {
     try {
       if (!logged) return alert("Please login first");
 
-      const data = await axios.post("http://localhost:3000/api/cart/add", {
+      const data = await axios.post(`${apiUrl}cart/add`, {
         product_id: item.id,
         customer_id: user.id,
       });

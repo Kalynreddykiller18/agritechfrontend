@@ -4,6 +4,8 @@ import axios from "axios";
 import "./cart.css";
 import { Link } from "react-router-dom";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const Cart = () => {
   const { products, logged, cart, fetchCart, user, total, setTotal } =
     useContext(AgriContext);
@@ -70,7 +72,7 @@ const Cart = () => {
 
 const handleIncrement = async (cartitem, user, fetchCart) => {
   try {
-    const data = await axios.post("http://localhost:3000/api/cart/add", {
+    const data = await axios.post(`${apiUrl}cart/add`, {
       customer_id: user.id,
       product_id: cartitem.id,
     });
@@ -83,7 +85,7 @@ const handleIncrement = async (cartitem, user, fetchCart) => {
 
 const handleDecrement = async (cartitem, user, fetchCart) => {
   try {
-    const data = await axios.post("http://localhost:3000/api/cart/remove", {
+    const data = await axios.post(`${apiUrl}cart/remove`, {
       customer_id: user.id,
       product_id: cartitem.id,
     });
@@ -96,7 +98,7 @@ const handleDecrement = async (cartitem, user, fetchCart) => {
 
 const handleEmptiengCart = async (id, fetchCart) => {
   try {
-    const data = await axios.get(`http://localhost:3000/api/cart/empty/${id}`);
+    const data = await axios.get(`${apiUrl}cart/empty/${id}`);
     fetchCart();
   } catch (err) {
     console.log(err.message);
