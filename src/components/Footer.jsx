@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
-      <Link to={"/PrivacyPolicy.html"}>Privacy Policy</Link>
-      <Link to={"/RefundandCancellationPolicy.html"}>
+      <Link to={"/privacy-policy"}>Privacy Policy</Link>
+      <Link to={"/shippinganddelivery-policy"}>
         Refund & Cancellation Policy
       </Link>
-      <Link to={"/ShippingandDeliveryPolicy.html"}>
+      <Link to={"/refundandCancellation-policy"}>
         Shipping & Delivey Policy
       </Link>
-      <Link to={"/TermsandConditions.html"}>Terms & conditions</Link>
+      <Link to={"/termsandconditions-policy"}>Terms & conditions</Link>
     </footer>
   );
 };

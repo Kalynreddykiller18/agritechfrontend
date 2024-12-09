@@ -17,6 +17,12 @@ import Pecticides from "./components/products/Pecticides";
 import Cart from "./components/Cart";
 import { AgriContextProvider } from "./context/AgriContext";
 import Checkout from "./components/checkout/Checkout";
+import {
+  TermsAndConditions,
+  Shipping,
+  Privacy,
+  Cancellation,
+} from "./components/policy";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -44,6 +50,19 @@ const App = () => {
               <Route path="/pecticides" element={<Pecticides />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
+              <Route path="/privacy-policy" element={<Privacy />} />
+              <Route
+                path="/shippinganddelivery-policy"
+                element={<Shipping />}
+              />
+              <Route
+                path="/refundandCancellation-policy"
+                element={<Cancellation />}
+              />
+              <Route
+                path="/termsandconditions-policy"
+                element={<TermsAndConditions />}
+              />
             </Routes>
           </div>
           <Footer />
