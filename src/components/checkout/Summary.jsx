@@ -21,12 +21,12 @@ const Summary = ({ checkoutAdress }) => {
             <div key={item._id}>
               <span>{cartproduct[0].name}</span>
               <span>Qty: {item.count}</span>
-              <span>Price: {cartproduct[0].price * item.count}</span>
+              <span>Price: ₹{cartproduct[0].price * item.count}</span>
             </div>
           );
         })}
       </div>
-      <div className="totalsummary">Total amount to be paid: {+total}</div>
+      <div className="totalsummary">Total amount to be paid: ₹{+total}</div>
       <div className="checkoutaddress">
         <h3>{checkoutAdress.name}</h3>
         <p>{checkoutAdress.line1}</p>

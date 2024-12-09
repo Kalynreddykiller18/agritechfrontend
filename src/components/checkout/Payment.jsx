@@ -79,7 +79,7 @@ const Payment = () => {
   return (
     <div className="payment">
       <h3>Payment Page</h3>
-      <span>Your total is {total}, please complete the payment</span> <br />
+      <span>Your total is ₹{total}, please complete the payment</span> <br />
       <button onClick={handlePayment}>Pay Now</button>
       <div>{message && message}</div>
     </div>

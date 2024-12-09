@@ -113,7 +113,7 @@ const CartCard = ({ item, cartitem, user, fetchCart }) => {
         <h3 className="card-title">{cartitem.name}</h3>
         <h4 className="card-subtitle">{cartitem.category}</h4>
         <div className="card-footer">
-          <h4 className="card-price">${cartitem.price * item.count} </h4>
+          <h4 className="card-price">₹{cartitem.price * item.count} </h4>
           <div className="cartcardcontrol">
             <button
               onClick={() => handleIncrement(cartitem, user, fetchCart)}
