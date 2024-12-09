@@ -41,7 +41,7 @@ const Product = ({ item }) => {
         <p className="card-description">{item.description}</p>
         <div className="card-footer">
           <h4 className="card-price">${item.price}</h4>
-          <button disabled={alert} className="card-button" onClick={addToCart}>
+          <button disabled={alert1} className="card-button" onClick={addToCart}>
             <img className="button-icon" src="Cart.svg" alt="Cart" />
             {alert1 ? "Added..." : "Add to Cart"}
           </button>
