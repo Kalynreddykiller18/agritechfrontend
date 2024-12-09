@@ -17,6 +17,7 @@ import Pecticides from "./components/products/Pecticides";
 import Cart from "./components/Cart";
 import { AgriContextProvider } from "./context/AgriContext";
 import Checkout from "./components/checkout/Checkout";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
               <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </div>
+          <Footer />
         </Router>
       </ErrorBoundary>
     </AgriContextProvider>

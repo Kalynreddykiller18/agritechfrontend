@@ -43,9 +43,9 @@ nav img {
 
 /* Responsive Menu Button */
 .menu-button {
-  position: fixed;
+  /* position: absolute;
   bottom: 20px;
-  right: 20px;
+  right: 20px; */
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -57,13 +57,11 @@ nav img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 10; /* Ensure it stays above other elements */
 }
 
 .menu-button.open {
-  background-color: #ff5c5c;
-  color: white;
+  color: #ff5c5c;
 }
 
 nav ul .cartlink {
@@ -86,12 +84,18 @@ nav ul .cartcount {
 /* Menu for Mobile */
 
 @media (max-width: 800px) {
+  nav {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    z-index: 6;
+  }
+
   .nav-links {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     position: fixed;
-    top: 0;
+    top: 50px;
     right: 0;
     width: 200px;
     height: 100%;
@@ -99,11 +103,6 @@ nav ul .cartcount {
     transform: translateX(100%); /* Initially off-screen */
     transition: transform 0.3s ease-in-out;
     padding-top: 20px;
-  }
-
-  .mobcart li {
-    text-align: right;
-    margin-left: 60%;
   }
 }
 
