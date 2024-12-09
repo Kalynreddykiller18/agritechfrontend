@@ -6,7 +6,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 const Product = ({ item }) => {
   const { logged, cart, user, fetchCart } = useContext(AgriContext);
-  const [alert, setAlert] = useState(false);
+  const [alert1, setAlert1] = useState(false);
 
   const addToCart = async () => {
     try {
@@ -25,9 +25,9 @@ const Product = ({ item }) => {
   };
 
   const createCartAlert = () => {
-    setAlert(true);
+    setAlert1(true);
     setTimeout(() => {
-      setAlert(false);
+      setAlert1(false);
     }, 500);
   };
 
@@ -43,7 +43,7 @@ const Product = ({ item }) => {
           <h4 className="card-price">${item.price}</h4>
           <button disabled={alert} className="card-button" onClick={addToCart}>
             <img className="button-icon" src="Cart.svg" alt="Cart" />
-            {alert ? "Added..." : "Add to Cart"}
+            {aler1 ? "Added..." : "Add to Cart"}
           </button>
         </div>
       </div>

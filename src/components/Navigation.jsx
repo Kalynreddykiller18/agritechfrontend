@@ -36,7 +36,13 @@ const Navigation = () => {
             <Link to={"/login"}>Login</Link>
           </li>
         )}
-        {logged && <CartIcon menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+        {logged && (
+          <CartIcon
+            onClick={() => setMenuOpen(!menuOpen)}
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+          />
+        )}
       </ul>
       <ul className="mobcart">
         {!menuOpen && logged && (
