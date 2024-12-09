@@ -43,7 +43,7 @@ const Product = ({ item }) => {
           <h4 className="card-price">${item.price}</h4>
           <button disabled={alert} className="card-button" onClick={addToCart}>
             <img className="button-icon" src="Cart.svg" alt="Cart" />
-            {aler1 ? "Added..." : "Add to Cart"}
+            {alert1 ? "Added..." : "Add to Cart"}
           </button>
         </div>
       </div>
