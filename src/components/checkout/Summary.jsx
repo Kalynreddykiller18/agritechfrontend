@@ -28,6 +28,7 @@ const Summary = ({ checkoutAdress }) => {
       </div>
       <div className="totalsummary">Total amount to be paid: ₹{+total}</div>
       <div className="checkoutaddress">
+        <p>Address to be delivered:</p>
         <h3>{checkoutAdress.name}</h3>
         <p>{checkoutAdress.line1}</p>
         <p>{checkoutAdress.line2}</p>

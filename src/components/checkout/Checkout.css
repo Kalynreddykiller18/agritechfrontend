@@ -2,6 +2,7 @@
   padding: 20px;
   max-width: 600px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .step-status-bar {
@@ -66,7 +67,12 @@ button:disabled {
 .cartsummary div {
   display: grid;
   max-width: 500px;
-  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 30px;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+.cartsummary div span {
+  margin-bottom: 10px;
 }
 
 .totalsummary {

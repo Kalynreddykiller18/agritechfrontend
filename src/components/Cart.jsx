@@ -24,7 +24,7 @@ const Cart = () => {
     <div>
       {console.log(total)}
       {total === 0 ? (
-        <h2 className="emptytext"> You are cart is empty</h2>
+        <h2 className="emptytext"> Your cart is empty</h2>
       ) : (
         <>
           <div className="products">
