@@ -41,6 +41,12 @@ body {
   background-blend-mode: overlay;
 }
 
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
 #root {
   min-height: 100vh;
   height: auto;
