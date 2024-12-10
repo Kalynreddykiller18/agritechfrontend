@@ -65,6 +65,7 @@ const App = () => {
               />
             </Routes>
           </div>
+          <div className="spacecover" />
           <Footer />
         </Router>
       </ErrorBoundary>

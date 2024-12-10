@@ -7,7 +7,7 @@
   max-width: 300px;
   width: 300px;
   margin: 20px auto;
-  background: #fff;
+  background: #ffffffe2;
   border: 1px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
@@ -44,12 +44,17 @@
 
 .empty {
   background-color: rgba(219, 8, 8, 0.977);
-  color: #ddd;
+  color: white;
 }
 
 .checkout {
   background-color: #007bff;
-  color: #ddd;
+  color: white;
+}
+
+.checkout a {
+  color: white;
+  text-decoration: none;
 }
 
 @media (max-width: 450px) {

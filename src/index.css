@@ -4,6 +4,10 @@
   border: 0;
 }
 
+.card button {
+  box-shadow: 0 2px 4px rgba(0, 0, 10, 0.8);
+}
+
 /* Disable the spinner arrows for type="number" inputs */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -25,9 +29,23 @@ a {
   padding: 20px 50px;
 }
 
+body {
+  background-image: url("/strawberry-field.jpg");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/strawberry-field.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay;
+}
+
 #root {
   min-height: 100vh;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
 }
 
 footer {
@@ -40,9 +58,12 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  background-color: rgba(128, 128, 128, 0.306);
+  background-color: rgba(128, 128, 128, 0.906);
   padding: 20px;
-  margin-bottom: 20px !important;
+}
+
+.spacecover {
+  flex-grow: 1;
 }
 
 input,
