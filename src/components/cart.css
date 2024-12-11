@@ -42,6 +42,12 @@
   padding: 10px 5px;
 }
 
+.cartfooter span {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  line-height: 30px;
+}
+
 .empty {
   background-color: rgba(219, 8, 8, 0.977);
   color: white;

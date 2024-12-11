@@ -4,6 +4,8 @@ import { AgriContext } from "../../context/AgriContext";
 import "./address.css";
 import axios from "axios";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const AdressCheckout = ({
   setCheckoutAdress,
   selectAdressIndex,
@@ -46,7 +48,7 @@ const AdressCheckout = ({
 
       // API call to add a new address
       const dataadd = await axios.post(
-        `http://localhost:3000/api/customer/addaddress/${user.id}`,
+        `${apiUrl}customer/addaddress/${user.id}`,
         {
           name: nameRef.current.value,
           line1: line1Ref.current.value,
