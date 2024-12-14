@@ -22,15 +22,12 @@ const Cart = () => {
 
   return (
     <div>
-      {console.log(total)}
       {total === 0 ? (
         <h2 className="emptytext"> Your cart is empty</h2>
       ) : (
         <>
           <div className="products">
             {cart.map((item) => {
-              console.log("CartItem: ", item);
-              console.log("Products: ", products);
               const cartproduct = products.find(
                 (item2) => item.product_id === item2.id
               );

@@ -41,7 +41,6 @@ const Signup = () => {
 
     const singup = async () => {
       try {
-        console.log("Hello ");
         const res = await axios.post(`${apiUrl}customer`, user);
         if (res.status === 201) {
           setMes("Account created succesfully, redirecting to login page...");

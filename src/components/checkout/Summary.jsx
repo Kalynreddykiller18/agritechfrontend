@@ -16,7 +16,6 @@ const Summary = ({ checkoutAdress }) => {
           const cartproduct = products.filter(
             (item2) => item.product_id === item2.id
           );
-          console.log(cartproduct);
           return (
             <div key={item._id}>
               <span>{cartproduct[0].name}</span>

@@ -12,7 +12,6 @@ const AdressCheckout = ({
   setSelectAdressIndex,
 }) => {
   const { user, fetchUser } = useContext(AgriContext);
-  console.log(user);
   const [adresses, setAdresses] = useState(user.adress); // Local state to manage addresses
   const [mes, setMes] = useState("");
   const [addbutt, setAddbutt] = useState(true);

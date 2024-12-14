@@ -49,6 +49,8 @@ const Shipping = () => {
       </p>
       <h3>Contact Us:</h3>
       <p>
+        Bejjanki Kalyan Reddy
+        <br />
         AGRIETCH
         <br />
         Old Bowenpally, Hyderabad, Telangana

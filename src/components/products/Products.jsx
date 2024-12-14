@@ -8,7 +8,6 @@ const Products = () => {
 
   return (
     <div className="products">
-      {console.log(user)}
       {products.map((item) => (
         <Product key={item.id} item={item} />
       ))}
