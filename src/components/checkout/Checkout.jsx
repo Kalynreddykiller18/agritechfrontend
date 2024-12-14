@@ -45,7 +45,7 @@ const Checkout = () => {
           />
         )}
         {currentStep === 1 && <Summary checkoutAdress={checkoutAdress} />}
-        {currentStep === 2 && <Payment />}
+        {currentStep === 2 && <Payment checkoutAdress={checkoutAdress} />}
       </div>
 
       {/* Navigation Buttons */}

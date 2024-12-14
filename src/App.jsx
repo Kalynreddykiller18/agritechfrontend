@@ -24,13 +24,14 @@ import {
   Cancellation,
 } from "./components/policy";
 import Footer from "./components/Footer";
+import OrderConfirm from "./components/checkout/OrderConfirm";
 
 const App = () => {
   return (
     <AgriContextProvider>
       <ErrorBoundary>
         <Router>
-          <div class="background"></div>
+          <div className="background"></div>
           <Navigation />
           <div className="container">
             <Routes>
@@ -64,6 +65,7 @@ const App = () => {
                 path="/termsandconditions-policy"
                 element={<TermsAndConditions />}
               />
+              <Route path="/orderconfirm/:token" element={<OrderConfirm />} />
             </Routes>
           </div>
           <div className="spacecover" />

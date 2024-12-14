@@ -2,10 +2,12 @@ import React, { useContext, useState } from "react";
 import { AgriContext } from "../../context/AgriContext";
 const apiUrl = import.meta.env.VITE_API_URL;
 const keyRazor = import.meta.env.VITE_RAZOR_KEY;
+import { useNavigate } from "react-router-dom";
 
-const Payment = () => {
-  const { user, total } = useContext(AgriContext);
+const Payment = ({ checkoutAdress }) => {
+  const { user, cart, total } = useContext(AgriContext);
   const [message, setMessage] = useState();
+  const navigate = useNavigate();
 
   const handlePayment = async () => {
     try {
@@ -41,6 +43,8 @@ const Payment = () => {
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_signature: response.razorpay_signature,
+                cart: cart,
+                checkout_address: checkoutAdress,
               }),
             }
           );
@@ -50,6 +54,7 @@ const Payment = () => {
           if (result.success) {
             alert("Payment Verified! Thank you for your purchase.");
             // Create order in backend
+            navigate(`/orderconfirm/${orderId}`);
           } else {
             alert("Payment Verification Failed! Please contact support.");
           }
@@ -69,7 +74,7 @@ const Payment = () => {
 
       rzp.on("payment.failed", function (response) {
         console.error("Payment failed:", response.error.description);
-        setMessage("Payment failed:", response.error.description);
+        setMessage(`Payment failed: ${response.error.description}`);
       });
     } catch (error) {
       console.error("Payment initiation failed:", error);

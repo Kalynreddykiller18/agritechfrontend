@@ -95,7 +95,7 @@ const AdressCheckout = ({
   const handleDeleteAddress = async (index) => {
     try {
       const data = await axios.get(
-        `http://localhost:3000/api/customer/deleteaddress/${user.id}/${index}`
+        `${apiUrl}customer/deleteaddress/${user.id}/${index}`
       );
 
       alert("Address deleted");
@@ -118,7 +118,6 @@ const AdressCheckout = ({
         <div className="adresslist">
           <p>Select address from below or add a new one</p>
           <ul>
-            {console.log(adresses)}
             {adresses.map((item, index) => (
               <div key={index} className="adress-item">
                 <input
