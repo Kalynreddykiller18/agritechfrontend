@@ -25,6 +25,9 @@ const Navigation = () => {
         <li onClick={() => setMenuOpen(!menuOpen)}>
           <Link to={"/seeds"}>Seeds</Link>
         </li>
+        <li onClick={() => setMenuOpen(!menuOpen)}>
+          <Link to={"/orders"}>Orders</Link>
+        </li>
         {logged ? (
           <li onClick={() => setMenuOpen(!menuOpen)}>
             <Link onClick={() => setLogged(false)} to={"/login"}>

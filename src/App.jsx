@@ -25,6 +25,7 @@ import {
 } from "./components/policy";
 import Footer from "./components/Footer";
 import OrderConfirm from "./components/checkout/OrderConfirm";
+import Order from "./components/Order";
 
 const App = () => {
   return (
@@ -66,6 +67,14 @@ const App = () => {
                 element={<TermsAndConditions />}
               />
               <Route path="/orderconfirm/:token" element={<OrderConfirm />} />
+              <Route
+                path="/orders"
+                element={
+                  <ProtectedRoute>
+                    <Order />
+                  </ProtectedRoute>
+                }
+              />
             </Routes>
           </div>
           <div className="spacecover" />
