@@ -4,10 +4,24 @@ import { Link } from "react-router-dom";
 import { AgriContext } from "../context/AgriContext";
 import "./Navigation.css";
 import CartIcon from "./CartIcon";
+import axios from "axios";
+
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const Navigation = () => {
   const { logged, setLogged } = useContext(AgriContext);
   const [menuOpen, setMenuOpen] = useState(false); // State to toggle menu
+
+  const handleLogout = async () => {
+    try {
+      const data = await axios.get(`${apiUrl}customer/logout`, {
+        withCredentials: true,
+      });
+      setLogged(false);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
 
   return (
     <nav>
@@ -30,7 +44,7 @@ const Navigation = () => {
         </li>
         {logged ? (
           <li onClick={() => setMenuOpen(!menuOpen)}>
-            <Link onClick={() => setLogged(false)} to={"/login"}>
+            <Link onClick={handleLogout} to={"/login"}>
               Logout
             </Link>
           </li>

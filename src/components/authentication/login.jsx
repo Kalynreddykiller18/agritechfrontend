@@ -27,11 +27,19 @@ const Login = () => {
         password: passRef.current.value,
       };
 
-      const data = await axios.post(`${apiUrl}customer/login`, credentials);
+      const data = await axios.post(`${apiUrl}customer/login`, credentials, {
+        withCredentials: true,
+      });
 
       if (data.status === 200) {
         setLogged(true);
-        setUser(data.data.newcust);
+        console.log("done", data.data);
+        const userdata = await axios.get(`${apiUrl}customer/byjwt`, {
+          withCredentials: true,
+        });
+
+        console.log("New Data", userdata.data);
+        setUser(userdata.data);
         setMes("Logging In...");
         navigate("/");
       }
