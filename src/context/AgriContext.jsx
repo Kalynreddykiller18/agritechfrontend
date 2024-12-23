@@ -57,6 +57,7 @@ export const AgriContextProvider = ({ children }) => {
   useEffect(() => {
     fetchProducts();
     tryDefaultLogin();
+    console.log("Dev branch");
   }, []);
 
   useEffect(() => {
