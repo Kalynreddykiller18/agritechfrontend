@@ -44,8 +44,14 @@ export const AgriContextProvider = ({ children }) => {
 
   const tryDefaultLogin = async () => {
     try {
+      const token = localStorage.getItem("took");
+      if (!token) {
+        return null;
+      }
       const userdata = await axios.get(`${apiUrl}customer/byjwt`, {
-        withCredentials: true,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
       setLogged(true);
       setUser(userdata.data);
