@@ -105,7 +105,12 @@ const handleEmptiengCart = async (id, fetchCart) => {
 const CartCard = ({ item, cartitem, user, fetchCart }) => {
   return (
     <div className="cartcard">
-      <img className="card-img" src={cartitem.image} alt="Product" />
+      <img
+        className="card-img"
+        //  src={cartitem.image}
+        src="/Pecticide.jpg"
+        alt="Product"
+      />
       <div className="card-content">
         <h3 className="card-title">{cartitem.name}</h3>
         <h4 className="card-subtitle">{cartitem.category}</h4>

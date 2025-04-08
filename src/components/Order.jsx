@@ -54,7 +54,8 @@ const Order = () => {
               <div key={item.record_id} className="card">
                 <img
                   className="card-img"
-                  src={orderproduct.image}
+                  // src={orderproduct.image}x
+                  src="/Pecticide.jpg"
                   alt="Product"
                 />
                 <div className="card-content">

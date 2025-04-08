@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, memo } from "react";
 import "./product.css";
 import axios from "axios";
 import { AgriContext } from "../../../context/AgriContext";
@@ -33,7 +33,8 @@ const Product = ({ item }) => {
 
   return (
     <div className="card">
-      <img className="card-img" src={item.image} alt="Product" />
+      {/* <img className="card-img" src={item.image} alt="Product" /> */}
+      <img className="card-img" src="/Pecticide.jpg" alt="Product" />
       <div className="card-content">
         <h3 className="card-title">{item.name}</h3>
         <h4 className="card-subtitle">{item.category}</h4>
@@ -51,4 +52,4 @@ const Product = ({ item }) => {
   );
 };
 
-export default Product;
+export default memo(Product);
